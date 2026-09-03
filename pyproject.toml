@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "avr-to-rdf"
+version = "0.1.0"
+description = "Convert Antibody Validation Report records to linked open data in RDF format"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [
+    { name = "Bruce W. Herr II", email = "bherr@iu.edu" },
+]
+dependencies = [
+    "linkml>=1.8.0",
+    "pyyaml>=6.0",
+    "requests>=2.31.0",
+    "rdflib>=7.0",
+    "jsonschema>=4.20.0",
+    "pydantic>=2.0",
+    "click>=8.1.0",
+    "markdown-it-py>=3.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-cov>=4.5.0",
+    "black>=23.11.0",
+    "ruff>=0.1.7",
+]
+
+[project.scripts]
+avr-to-rdf = "avr_to_rdf.cli:main"
+
+[tool.setuptools]
+packages = ["avr_to_rdf"]
+package-dir = {"" = "src"}
+
+[tool.setuptools.package-data]
+avr_to_rdf = ["schema/*.yaml"]
+
+[tool.black]
+line-length = 100
+target-version = ["py39"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
