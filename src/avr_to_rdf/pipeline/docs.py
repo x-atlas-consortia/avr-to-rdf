@@ -6,6 +6,7 @@ import json
 import re
 import shutil
 import subprocess
+import tempfile
 from pathlib import Path
 
 from linkml.generators.docgen import DocGenerator
@@ -284,36 +285,41 @@ def _render_mermaid_to_images(mmd_path: Path, output_dir: Path) -> None:
     """Render a Mermaid diagram to SVG and PNG using the Mermaid CLI."""
     svg_path = output_dir / (mmd_path.stem + ".svg")
     png_path = output_dir / (mmd_path.stem + ".png")
-    subprocess.run(
-        [
-            "npx",
-            "-y",
-            "@mermaid-js/mermaid-cli",
-            "-q",
-            "-i",
-            str(mmd_path),
-            "-o",
-            str(svg_path),
-        ],
-        check=True,
-        capture_output=True,
-        text=True,
-    )
-    subprocess.run(
-        [
-            "npx",
-            "-y",
-            "@mermaid-js/mermaid-cli",
-            "-q",
-            "-i",
-            str(mmd_path),
-            "-o",
-            str(png_path),
-        ],
-        check=True,
-        capture_output=True,
-        text=True,
-    )
+    mermaid_cmd = ["mmdc"] if shutil.which("mmdc") else ["npx", "-y", "@mermaid-js/mermaid-cli"]
+    puppeteer_config = {"args": ["--no-sandbox", "--disable-setuid-sandbox"]}
+
+    with tempfile.NamedTemporaryFile(mode="w", suffix=".json", delete=False) as temp_config:
+        json.dump(puppeteer_config, temp_config)
+        config_path = Path(temp_config.name)
+
+    try:
+        for output_path in (svg_path, png_path):
+            command = [
+                *mermaid_cmd,
+                "-q",
+                "-p",
+                str(config_path),
+                "-i",
+                str(mmd_path),
+                "-o",
+                str(output_path),
+            ]
+            try:
+                subprocess.run(
+                    command,
+                    check=True,
+                    capture_output=True,
+                    text=True,
+                )
+            except subprocess.CalledProcessError as exc:
+                raise RuntimeError(
+                    f"Mermaid CLI failed for {mmd_path} -> {output_path}\n"
+                    f"Command: {' '.join(command)}\n"
+                    f"stdout:\n{exc.stdout}\n"
+                    f"stderr:\n{exc.stderr}"
+                ) from exc
+    finally:
+        config_path.unlink(missing_ok=True)
 
 
 def generate_schema_outputs(schema_path: Path, output_dir: Path) -> None:
