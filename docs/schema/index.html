@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AVR Schema Resources</title>
+  <style>
+    body { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; line-height: 1.6; color: #222; }
+    a { color: #2f4fc2; }
+    .info-box { background: #f0f4ff; border-left: 4px solid #667eea; padding: 20px; border-radius: 4px; margin-bottom: 20px; }
+    .resource-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 16px; }
+    .resource-card { border: 2px solid #eee; border-radius: 6px; padding: 16px; background: #fff; }
+    .resource-card a { display: inline-block; text-decoration: none; color: white; background: #667eea; padding: 6px 12px; border-radius: 4px; font-weight: 500; }
+    .file-list { list-style: none; background: #f5f5f5; padding: 20px; border-radius: 4px; border-left: 4px solid #667eea; }
+    .file-list li { margin: 8px 0; padding: 8px; background: white; border-radius: 4px; display: flex; justify-content: space-between; align-items: center; }
+    .file-type { display: inline-block; padding: 4px 8px; background: #667eea; color: white; border-radius: 4px; font-size: 0.8em; font-weight: bold; margin-left: 10px; }
+  </style>
+</head>
+<body>
+  <p><a href="../">← Back to Home</a> · <a href="../data/">Data</a> · <a href="./documentation/">Documentation</a></p>
+  <h1>AVR Schema Resources</h1>
+  <div class="info-box">
+    <p><strong>Schema IRI:</strong> <code>https://purl.humanatlas.io/schema/avr</code></p>
+    <p><strong>Property namespace:</strong> <code>https://purl.humanatlas.io/schema/avr#</code> (<code>avro:</code>)</p>
+  </div>
+  <div class="resource-grid">
+    <div class="resource-card"><h3>LinkML Schema</h3><p>Canonical AVR LinkML schema source.</p><a href="./schema.yaml">Open YAML</a></div>
+    <div class="resource-card"><h3>JSON Schema</h3><p>Validation schema for JSON-based integrations.</p><a href="./schema.json">Open JSON Schema</a></div>
+    <div class="resource-card"><h3>JSON-LD Context</h3><p>Linked data context mapping for web clients.</p><a href="./schema.context.jsonld">Open Context</a></div>
+    <div class="resource-card"><h3>OWL</h3><p>Ontology representation for semantic tooling.</p><a href="./schema.owl">Open OWL</a></div>
+    <div class="resource-card"><h3>Mermaid ER Diagram</h3><p>Editable schema diagram source for docs and tooling.</p><a href="./schema.mmd">Open MMD</a></div>
+    <div class="resource-card"><h3>SVG Diagram</h3><p>Rendered schema diagram in vector format.</p><a href="./schema.svg">Open SVG</a></div>
+    <div class="resource-card"><h3>PNG Diagram</h3><p>Rendered schema diagram in raster format.</p><a href="./schema.png">Open PNG</a></div>
+  </div>
+  <h2>Other Files</h2>
+  <div id="schema-files"><div class="file-list">Loading file list...</div></div>
+  <script>
+    const PRIMARY = new Set(["index.html","schema.yaml","schema.json","schema.context.jsonld","schema.owl","schema.mmd","schema.svg","schema.png","files.json"]);
+    fetch('./files.json').then(r => r.ok ? r.json() : null).then(data => {
+      const files = (data?.files || []).filter(file => !PRIMARY.has(file));
+      if (!files.length) {
+        document.getElementById('schema-files').innerHTML = '<p>No additional files found.</p>';
+        return;
+      }
+      const list = document.createElement('ul');
+      list.className = 'file-list';
+      files.sort((a,b) => a.localeCompare(b)).forEach(file => {
+        const li = document.createElement('li');
+        const link = document.createElement('a');
+        link.href = './' + file;
+        link.textContent = file;
+        const badge = document.createElement('span');
+        badge.className = 'file-type';
+        badge.textContent = file.split('.').pop().toUpperCase();
+        li.appendChild(link);
+        li.appendChild(badge);
+        list.appendChild(li);
+      });
+      document.getElementById('schema-files').innerHTML = '';
+      document.getElementById('schema-files').appendChild(list);
+    }).catch(() => {
+      document.getElementById('schema-files').innerHTML = '<p>Schema manifest not available.</p>';
+    });
+  </script>
+</body>
+</html>

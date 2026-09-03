@@ -1,0 +1,12 @@
+{
+  "files": [
+    "avr-data.json",
+    "avr-data.jsonld",
+    "avr-data.nt",
+    "avr-data.owl",
+    "avr-data.source.json",
+    "avr-data.ttl",
+    "avr-data.yaml",
+    "index.html"
+  ]
+}

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AntibodyValidationReportCollection</title>
+  <style>
+    body { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #222; }
+    a { color: #2f4fc2; }
+    table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
+    th, td { border: 1px solid #ddd; padding: 0.5rem; text-align: left; vertical-align: top; }
+    th { background: #f4f6fb; }
+    code { background: #f4f4f4; padding: 0.1rem 0.3rem; border-radius: 4px; }
+    pre { background: #f7f7f7; padding: 1rem; overflow-x: auto; border-radius: 6px; }
+  </style>
+</head>
+<body>
+<hr />
+<h2>search:<br />
+boost: 10.0</h2>
+<h1>Class: Antibody Validation Report Collection (AntibodyValidationReportCollection)</h1>
+<p><em>A collection of Antibody Validation Reports.</em></p>
+<div data-search-exclude markdown="1">
+<p>URI: <a href="https://purl.humanatlas.io/schema/avr#AntibodyValidationReportCollection">avro:AntibodyValidationReportCollection</a></p>
+<pre><code class="language-mermaid"> classDiagram
+    class AntibodyValidationReportCollection
+    click AntibodyValidationReportCollection href &quot;../AntibodyValidationReportCollection/&quot;
+      AntibodyValidationReportCollection : antibodies
+        
+          
+    
+        
+        
+        AntibodyValidationReportCollection --&gt; &quot;*&quot; Antibody : antibodies
+        click Antibody href &quot;../Antibody/&quot;
+    
+
+        
+      
+</code></pre>
+<!-- no inheritance hierarchy -->
+<h2>Class Properties</h2>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Class URI</td>
+<td><a href="https://purl.humanatlas.io/schema/avr#AntibodyValidationReportCollection">avro:AntibodyValidationReportCollection</a></td>
+</tr>
+<tr>
+<td>Tree Root</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h2>Slots</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+<th>Inheritance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="antibodies.html">antibodies</a></td>
+<td>* <br/> <a href="Antibody.html">Antibody</a></td>
+<td>List of antibodies in this collection</td>
+<td>direct</td>
+</tr>
+</tbody>
+</table>
+<h2>Identifier and Mapping Information</h2>
+<h3>Schema Source</h3>
+<ul>
+<li>from schema: https://purl.humanatlas.io/schema/avr</li>
+</ul>
+<h2>Mappings</h2>
+<table>
+<thead>
+<tr>
+<th>Mapping Type</th>
+<th>Mapped Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>self</td>
+<td>avro:AntibodyValidationReportCollection</td>
+</tr>
+<tr>
+<td>native</td>
+<td>avro:AntibodyValidationReportCollection</td>
+</tr>
+</tbody>
+</table>
+<h2>LinkML Source</h2>
+<!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
+<h3>Direct</h3>
+<details>
+```yaml
+name: AntibodyValidationReportCollection
+description: A collection of Antibody Validation Reports.
+title: Antibody Validation Report Collection
+from_schema: https://purl.humanatlas.io/schema/avr
+rank: 1000
+attributes:
+  antibodies:
+    name: antibodies
+    description: List of antibodies in this collection.
+    title: antibodies
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    domain_of:
+    - AntibodyValidationReportCollection
+    range: Antibody
+    multivalued: true
+    inlined_as_list: true
+class_uri: avro:AntibodyValidationReportCollection
+tree_root: true
+<pre><code>&lt;/details&gt;
+
+### Induced
+
+&lt;details&gt;
+```yaml
+name: AntibodyValidationReportCollection
+description: A collection of Antibody Validation Reports.
+title: Antibody Validation Report Collection
+from_schema: https://purl.humanatlas.io/schema/avr
+rank: 1000
+attributes:
+  antibodies:
+    name: antibodies
+    description: List of antibodies in this collection.
+    title: antibodies
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    owner: AntibodyValidationReportCollection
+    domain_of:
+    - AntibodyValidationReportCollection
+    range: Antibody
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
+class_uri: avro:AntibodyValidationReportCollection
+tree_root: true
+
+</code></pre>
+</details></div>
+</body>
+</html>

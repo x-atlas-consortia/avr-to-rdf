@@ -1,0 +1,850 @@
+@prefix avro: <https://purl.humanatlas.io/schema/avr#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix linkml: <https://w3id.org/linkml/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+avro:AntibodyValidationReportCollection a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "AntibodyValidationReportCollection" ;
+    dcterms:title "Antibody Validation Report Collection" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:antibodies ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom avro:Antibody ;
+            owl:onProperty avro:antibodies ] ;
+    skos:definition "A collection of Antibody Validation Reports." ;
+    skos:exactMatch avro:AntibodyValidationReportCollection ;
+    skos:inScheme <https://purl.humanatlas.io/schema/avr> .
+
+avro:Antibody a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "Antibody" ;
+    dcterms:title "Antibody" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom linkml:Boolean ;
+            owl:onProperty avro:recommended ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty avro:lot_number ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:isotype ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:previous_version_pdf_uuid ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:concentration_value ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:uniprot_accession_number ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty avro:antibody_uuid ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty avro:fluorescent_reporter ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:clonality ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty avro:taxon ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty avro:antigen_retrieval ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:catalog_number ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:antibody_uuid ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty avro:previous_version_pdf_filename ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:group_uuid ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:Boolean ;
+            owl:onProperty avro:senescence_specific ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty avro:created_by_user_email ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:taxon ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:previous_version_pdf_filename ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty avro:conjugate ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty avro:clonality ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:method ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:catalog_number ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:omap ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:fluorescent_reporter ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:tissue_preservation ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:conjugate ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:protocol_doi ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:avr_pdf ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:created_by_user_sub ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty avro:catalog_number ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:hgnc_id ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:segmentation_cell_membrane ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:vendor_affiliation ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:avr_pdf ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom avro:ResourceIdentifier ;
+            owl:onProperty avro:rrid ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:clone_id ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:taxon ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty avro:created_by_user_displayname ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:created_by_user_displayname ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:Integer ;
+            owl:onProperty avro:dilution_factor ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:created_by_user_email ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:created_by_user_email ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:rrid ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:next_version_id ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty avro:previous_version_pdf_uuid ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:tissue_preservation ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:next_version_id ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty avro:clone_id ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:host ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:concentration_value ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty avro:antibody_hubmap_id ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:avr_pdf_filename ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty avro:avr_pdf_uuid ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:cell_marker ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty avro:segmentation_cell_membrane ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:recombinant ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:group_uuid ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty avro:host ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:antigen_retrieval ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty avro:created_by_user_sub ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:previous_version_pdf_uuid ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:avr_pdf_uuid ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:target_symbol ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:organ_uberon_id ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty avro:vendor_affiliation ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom avro:ResourceIdentifier ;
+            owl:onProperty avro:organ_uberon_id ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:manuscript_doi ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:previous_version_id ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty avro:vendor_name ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom avro:ResourceIdentifier ;
+            owl:onProperty avro:manuscript_doi ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:vendor_name ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:conjugate ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom avro:ResourceIdentifier ;
+            owl:onProperty avro:protocol_doi ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:senescence_specific ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:organ_uberon_id ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:organ ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:cycle_number ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:segmentation_cell_membrane ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:vendor_affiliation ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:recombinant ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:manuscript_doi ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:lot_number ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty avro:organ ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:clone_id ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:antibody_uuid ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:previous_version_id ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:method ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:lot_number ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:Boolean ;
+            owl:onProperty avro:recombinant ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:rrid ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:target_symbol ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:recommended ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom avro:ResourceIdentifier ;
+            owl:onProperty avro:author_orcids ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:fluorescent_reporter ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:author_orcids ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:hgnc_id ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty avro:host ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty avro:concentration_value ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty avro:isotype ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:created_by_user_sub ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:Integer ;
+            owl:onProperty avro:cycle_number ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty avro:avr_pdf_filename ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:senescence_specific ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:antigen_retrieval ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom avro:ResourceIdentifier ;
+            owl:onProperty avro:avr_pdf ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:avr_pdf_filename ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty avro:tissue_preservation ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom avro:ResourceIdentifier ;
+            owl:onProperty avro:uniprot_accession_number ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty avro:recommended ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:cell_marker ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty avro:antibody_hubmap_id ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty avro:clonality ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:protocol_doi ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty avro:previous_version_id ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom avro:ResourceIdentifier ;
+            owl:onProperty avro:omap_id ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:dilution_factor ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:dilution_factor ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:avr_pdf_uuid ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:cycle_number ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty avro:method ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom avro:ResourceIdentifier ;
+            owl:onProperty avro:hgnc_id ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:omap_id ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty avro:group_uuid ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty avro:omap ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:omap ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:isotype ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:antibody_hubmap_id ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty avro:target_symbol ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:omap_id ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:organ ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:created_by_user_displayname ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:uniprot_accession_number ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty avro:next_version_id ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:vendor_name ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:previous_version_pdf_filename ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty avro:cell_marker ] ;
+    skos:definition "An antibody subject to validation reporting." ;
+    skos:exactMatch avro:Antibody ;
+    skos:inScheme <https://purl.humanatlas.io/schema/avr> .
+
+<https://purl.humanatlas.io/schema/avr#ClonalityEnum#monoclonal> a owl:Class,
+        avro:ClonalityEnum ;
+    rdfs:label "monoclonal" ;
+    rdfs:subClassOf avro:ClonalityEnum ;
+    skos:definition "Monoclonal antibody." .
+
+<https://purl.humanatlas.io/schema/avr#ClonalityEnum#polyclonal> a owl:Class,
+        avro:ClonalityEnum ;
+    rdfs:label "polyclonal" ;
+    rdfs:subClassOf avro:ClonalityEnum ;
+    skos:definition "Polyclonal antibody." .
+
+<https://purl.humanatlas.io/schema/avr#HostOrganism#Chicken> a owl:Class,
+        avro:HostOrganism ;
+    rdfs:label "Chicken" ;
+    rdfs:subClassOf avro:HostOrganism ;
+    skos:definition "Chicken (Gallus gallus)." .
+
+<https://purl.humanatlas.io/schema/avr#HostOrganism#Goat> a owl:Class,
+        avro:HostOrganism ;
+    rdfs:label "Goat" ;
+    rdfs:subClassOf avro:HostOrganism ;
+    skos:definition "Goat (Capra aegagrus hircus)." .
+
+<https://purl.humanatlas.io/schema/avr#HostOrganism#Human> a owl:Class,
+        avro:HostOrganism ;
+    rdfs:label "Human" ;
+    rdfs:subClassOf avro:HostOrganism ;
+    skos:definition "Human (Homo sapiens)." .
+
+<https://purl.humanatlas.io/schema/avr#HostOrganism#Mouse> a owl:Class,
+        avro:HostOrganism ;
+    rdfs:label "Mouse" ;
+    rdfs:subClassOf avro:HostOrganism ;
+    skos:definition "Mouse (Mus musculus)." .
+
+<https://purl.humanatlas.io/schema/avr#HostOrganism#Rabbit> a owl:Class,
+        avro:HostOrganism ;
+    rdfs:label "Rabbit" ;
+    rdfs:subClassOf avro:HostOrganism ;
+    skos:definition "Rabbit (Oryctolagus cuniculus)." .
+
+<https://purl.humanatlas.io/schema/avr#HostOrganism#Sheep> a owl:Class,
+        avro:HostOrganism ;
+    rdfs:label "Sheep" ;
+    rdfs:subClassOf avro:HostOrganism ;
+    skos:definition "Sheep (Ovis aries)." .
+
+avro:antibodies a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "antibodies" ;
+    dcterms:title "antibodies" ;
+    skos:definition "List of antibodies in this collection." ;
+    skos:inScheme <https://purl.humanatlas.io/schema/avr> .
+
+avro:author_orcids a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "author_orcids" ;
+    dcterms:title "author ORCIDs" ;
+    skos:definition "ORCID(s) of the author(s)." ;
+    skos:inScheme <https://purl.humanatlas.io/schema/avr> .
+
+avro:antibody_hubmap_id a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "antibody_hubmap_id" ;
+    dcterms:title "antibody hubmap identifier" ;
+    skos:definition "HuBMAP identifier for the antibody." ;
+    skos:inScheme <https://purl.humanatlas.io/schema/avr> .
+
+avro:antibody_uuid a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "antibody_uuid" ;
+    dcterms:title "antibody uuid" ;
+    skos:definition "Universally unique identifier for the antibody." ;
+    skos:inScheme <https://purl.humanatlas.io/schema/avr> .
+
+avro:antigen_retrieval a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "antigen_retrieval" ;
+    dcterms:title "antigen retrieval" ;
+    skos:definition "Antigen retrieval method used." ;
+    skos:inScheme <https://purl.humanatlas.io/schema/avr> .
+
+avro:avr_pdf a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "avr_pdf" ;
+    dcterms:title "AVR PDF URL" ;
+    skos:definition "Download URL for the validation report PDF." ;
+    skos:inScheme <https://purl.humanatlas.io/schema/avr> .
+
+avro:avr_pdf_filename a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "avr_pdf_filename" ;
+    dcterms:title "AVR PDF filename" ;
+    skos:definition "Filename of the validation report PDF." ;
+    skos:inScheme <https://purl.humanatlas.io/schema/avr> .
+
+avro:avr_pdf_uuid a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "avr_pdf_uuid" ;
+    dcterms:title "AVR PDF UUID" ;
+    skos:definition "UUID of the validation report PDF." ;
+    skos:inScheme <https://purl.humanatlas.io/schema/avr> .
+
+avro:catalog_number a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "catalog_number" ;
+    dcterms:title "catalog number" ;
+    skos:definition "Vendor catalog number." ;
+    skos:inScheme <https://purl.humanatlas.io/schema/avr> .
+
+avro:cell_marker a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "cell_marker" ;
+    dcterms:title "cell marker" ;
+    skos:definition "Cell marker information." ;
+    skos:inScheme <https://purl.humanatlas.io/schema/avr> .
+
+avro:clonality a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "clonality" ;
+    dcterms:title "clonality" ;
+    skos:definition "Clonality of the antibody (monoclonal or polyclonal)." ;
+    skos:inScheme <https://purl.humanatlas.io/schema/avr> .
+
+avro:clone_id a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "clone_id" ;
+    dcterms:title "clone identifier" ;
+    skos:definition "Clone identifier for monoclonal antibodies." ;
+    skos:inScheme <https://purl.humanatlas.io/schema/avr> .
+
+avro:concentration_value a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "concentration_value" ;
+    dcterms:title "concentration value" ;
+    skos:definition "Antibody concentration." ;
+    skos:inScheme <https://purl.humanatlas.io/schema/avr> .
+
+avro:conjugate a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "conjugate" ;
+    dcterms:title "conjugate" ;
+    skos:definition "Fluorescent or enzymatic conjugate." ;
+    skos:inScheme <https://purl.humanatlas.io/schema/avr> .
+
+avro:created_by_user_displayname a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "created_by_user_displayname" ;
+    dcterms:title "created by user displayname" ;
+    skos:definition "Name of user who created this record." ;
+    skos:inScheme <https://purl.humanatlas.io/schema/avr> .
+
+avro:created_by_user_email a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "created_by_user_email" ;
+    dcterms:title "created by user email" ;
+    skos:definition "Email of user who created this record." ;
+    skos:inScheme <https://purl.humanatlas.io/schema/avr> .
+
+avro:created_by_user_sub a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "created_by_user_sub" ;
+    dcterms:title "created by user subject" ;
+    skos:definition "Subject identifier of user who created this record." ;
+    skos:inScheme <https://purl.humanatlas.io/schema/avr> .
+
+avro:cycle_number a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "cycle_number" ;
+    dcterms:title "cycle number" ;
+    skos:definition "Cycle number in multi-cycle validation." ;
+    skos:inScheme <https://purl.humanatlas.io/schema/avr> .
+
+avro:dilution_factor a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "dilution_factor" ;
+    dcterms:title "dilution factor" ;
+    skos:definition "Recommended dilution factor for use." ;
+    skos:inScheme <https://purl.humanatlas.io/schema/avr> .
+
+avro:fluorescent_reporter a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "fluorescent_reporter" ;
+    dcterms:title "fluorescent reporter" ;
+    skos:definition "Fluorescent reporter used." ;
+    skos:inScheme <https://purl.humanatlas.io/schema/avr> .
+
+avro:group_uuid a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "group_uuid" ;
+    dcterms:title "group uuid" ;
+    skos:definition "UUID of the group managing this record." ;
+    skos:inScheme <https://purl.humanatlas.io/schema/avr> .
+
+avro:hgnc_id a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hgnc_id" ;
+    dcterms:title "HGNC identifier" ;
+    skos:definition "HGNC gene identifier." ;
+    skos:inScheme <https://purl.humanatlas.io/schema/avr> .
+
+avro:host a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "host" ;
+    dcterms:title "host" ;
+    skos:definition "Host organism used to generate the antibody." ;
+    skos:inScheme <https://purl.humanatlas.io/schema/avr> .
+
+avro:isotype a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "isotype" ;
+    dcterms:title "isotype" ;
+    skos:definition "Immunoglobulin isotype of the antibody." ;
+    skos:inScheme <https://purl.humanatlas.io/schema/avr> .
+
+avro:lot_number a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "lot_number" ;
+    dcterms:title "lot number" ;
+    skos:definition "Lot number of the specific antibody batch." ;
+    skos:inScheme <https://purl.humanatlas.io/schema/avr> .
+
+avro:manuscript_doi a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "manuscript_doi" ;
+    dcterms:title "manuscript DOI" ;
+    skos:definition "DOI of associated manuscript." ;
+    skos:inScheme <https://purl.humanatlas.io/schema/avr> .
+
+avro:method a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "method" ;
+    dcterms:title "method" ;
+    skos:definition "Analytical method used in validation." ;
+    skos:inScheme <https://purl.humanatlas.io/schema/avr> .
+
+avro:next_version_id a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "next_version_id" ;
+    dcterms:title "next version identifier" ;
+    skos:definition "Identifier of next version if this has been superseded." ;
+    skos:inScheme <https://purl.humanatlas.io/schema/avr> .
+
+avro:omap a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "omap" ;
+    dcterms:title "OMAP identifier" ;
+    skos:definition "OMAP (organ mapping anatomical project) identifier string, such as OMAP-14." ;
+    skos:inScheme <https://purl.humanatlas.io/schema/avr> .
+
+avro:omap_id a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "omap_id" ;
+    dcterms:title "OMAP PURL" ;
+    skos:definition "Canonical versionless OMAP PURL resolved from the OMAP identifier." ;
+    skos:inScheme <https://purl.humanatlas.io/schema/avr> .
+
+avro:organ a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "organ" ;
+    dcterms:title "organ" ;
+    skos:definition "Organ or tissue type used in validation." ;
+    skos:inScheme <https://purl.humanatlas.io/schema/avr> .
+
+avro:organ_uberon_id a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "organ_uberon_id" ;
+    dcterms:title "organ UBERON identifier" ;
+    skos:definition "UBERON identifier for the tissue/organ." ;
+    skos:inScheme <https://purl.humanatlas.io/schema/avr> .
+
+avro:previous_version_id a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "previous_version_id" ;
+    dcterms:title "previous version identifier" ;
+    skos:definition "Identifier of previous version if this is an update." ;
+    skos:inScheme <https://purl.humanatlas.io/schema/avr> .
+
+avro:previous_version_pdf_filename a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "previous_version_pdf_filename" ;
+    dcterms:title "previous version PDF filename" ;
+    skos:definition "Filename of previous version PDF." ;
+    skos:inScheme <https://purl.humanatlas.io/schema/avr> .
+
+avro:previous_version_pdf_uuid a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "previous_version_pdf_uuid" ;
+    dcterms:title "previous version PDF UUID" ;
+    skos:definition "UUID of previous version PDF." ;
+    skos:inScheme <https://purl.humanatlas.io/schema/avr> .
+
+avro:protocol_doi a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "protocol_doi" ;
+    dcterms:title "protocol DOI" ;
+    skos:definition "DOI of the experimental protocol." ;
+    skos:inScheme <https://purl.humanatlas.io/schema/avr> .
+
+avro:recombinant a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "recombinant" ;
+    dcterms:title "recombinant" ;
+    skos:definition "Whether the antibody is recombinant." ;
+    skos:inScheme <https://purl.humanatlas.io/schema/avr> .
+
+avro:recommended a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "recommended" ;
+    dcterms:title "recommended" ;
+    skos:definition "Whether this antibody is recommended for use." ;
+    skos:inScheme <https://purl.humanatlas.io/schema/avr> .
+
+avro:rrid a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "rrid" ;
+    dcterms:title "RRID" ;
+    skos:definition "Research Resource Identifier (RRID) for this antibody." ;
+    skos:inScheme <https://purl.humanatlas.io/schema/avr> .
+
+avro:segmentation_cell_membrane a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "segmentation_cell_membrane" ;
+    dcterms:title "segmentation cell membrane" ;
+    skos:definition "Cell membrane segmentation method." ;
+    skos:inScheme <https://purl.humanatlas.io/schema/avr> .
+
+avro:senescence_specific a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "senescence_specific" ;
+    dcterms:title "senescence-specific" ;
+    skos:definition "Whether the antibody is senescence-specific." ;
+    skos:inScheme <https://purl.humanatlas.io/schema/avr> .
+
+avro:target_symbol a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "target_symbol" ;
+    dcterms:title "target symbol" ;
+    skos:definition "Gene symbol (HGNC) of the antibody target." ;
+    skos:inScheme <https://purl.humanatlas.io/schema/avr> .
+
+avro:taxon a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "taxon" ;
+    dcterms:title "taxon" ;
+    skos:definition "Taxon information." ;
+    skos:inScheme <https://purl.humanatlas.io/schema/avr> .
+
+avro:tissue_preservation a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "tissue_preservation" ;
+    dcterms:title "tissue preservation" ;
+    skos:definition "Method of tissue preservation." ;
+    skos:inScheme <https://purl.humanatlas.io/schema/avr> .
+
+avro:uniprot_accession_number a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "uniprot_accession_number" ;
+    dcterms:title "UniProt accession number" ;
+    skos:definition "UniProt accession number for the target protein." ;
+    skos:inScheme <https://purl.humanatlas.io/schema/avr> .
+
+avro:vendor_affiliation a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "vendor_affiliation" ;
+    dcterms:title "vendor affiliation" ;
+    skos:definition "Vendor affiliation or alternative name." ;
+    skos:inScheme <https://purl.humanatlas.io/schema/avr> .
+
+avro:vendor_name a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "vendor_name" ;
+    dcterms:title "vendor name" ;
+    skos:definition "Name of the vendor/supplier." ;
+    skos:inScheme <https://purl.humanatlas.io/schema/avr> .
+
+avro:ClonalityEnum a owl:Class,
+        linkml:EnumDefinition ;
+    rdfs:label "ClonalityEnum" ;
+    owl:unionOf ( <https://purl.humanatlas.io/schema/avr#ClonalityEnum#monoclonal> <https://purl.humanatlas.io/schema/avr#ClonalityEnum#polyclonal> ) ;
+    skos:definition "Clonality of antibody." ;
+    skos:inScheme <https://purl.humanatlas.io/schema/avr> ;
+    linkml:permissible_values <https://purl.humanatlas.io/schema/avr#ClonalityEnum#monoclonal>,
+        <https://purl.humanatlas.io/schema/avr#ClonalityEnum#polyclonal> .
+
+avro:ResourceIdentifier a owl:Class,
+        linkml:TypeDefinition ;
+    rdfs:subClassOf linkml:Uriorcurie .
+
+avro:HostOrganism a owl:Class,
+        linkml:EnumDefinition ;
+    rdfs:label "HostOrganism" ;
+    owl:unionOf ( <https://purl.humanatlas.io/schema/avr#HostOrganism#Mouse> <https://purl.humanatlas.io/schema/avr#HostOrganism#Rabbit> <https://purl.humanatlas.io/schema/avr#HostOrganism#Goat> <https://purl.humanatlas.io/schema/avr#HostOrganism#Human> <https://purl.humanatlas.io/schema/avr#HostOrganism#Chicken> <https://purl.humanatlas.io/schema/avr#HostOrganism#Sheep> ) ;
+    skos:definition "Host organism for antibody generation." ;
+    skos:inScheme <https://purl.humanatlas.io/schema/avr> ;
+    linkml:permissible_values <https://purl.humanatlas.io/schema/avr#HostOrganism#Chicken>,
+        <https://purl.humanatlas.io/schema/avr#HostOrganism#Goat>,
+        <https://purl.humanatlas.io/schema/avr#HostOrganism#Human>,
+        <https://purl.humanatlas.io/schema/avr#HostOrganism#Mouse>,
+        <https://purl.humanatlas.io/schema/avr#HostOrganism#Rabbit>,
+        <https://purl.humanatlas.io/schema/avr#HostOrganism#Sheep> .
+
+<https://purl.humanatlas.io/schema/avr> a owl:Ontology ;
+    rdfs:label "avro" ;
+    dcterms:title "Antibody Validation Report (AVR) Application Ontology" ;
+    skos:definition "LinkML schema for Antibody Validation Report (AVR) data." .
+

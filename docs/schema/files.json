@@ -1,0 +1,12 @@
+{
+  "files": [
+    "index.html",
+    "schema.context.jsonld",
+    "schema.json",
+    "schema.mmd",
+    "schema.owl",
+    "schema.png",
+    "schema.svg",
+    "schema.yaml"
+  ]
+}

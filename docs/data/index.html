@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AVR Data Resources</title>
+  <style>
+    body { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; line-height: 1.6; color: #222; }
+    a { color: #2f4fc2; }
+    .info-box { background: #f0f4ff; border-left: 4px solid #667eea; padding: 20px; border-radius: 4px; margin-bottom: 20px; }
+    .resource-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 16px; }
+    .resource-card { border: 2px solid #eee; border-radius: 6px; padding: 16px; background: #fff; }
+    .resource-card a { display: inline-block; text-decoration: none; color: white; background: #667eea; padding: 6px 12px; border-radius: 4px; font-weight: 500; }
+    .file-list { list-style: none; background: #f5f5f5; padding: 20px; border-radius: 4px; border-left: 4px solid #667eea; }
+    .file-list li { margin: 8px 0; padding: 8px; background: white; border-radius: 4px; display: flex; justify-content: space-between; align-items: center; }
+    .file-type { display: inline-block; padding: 4px 8px; background: #667eea; color: white; border-radius: 4px; font-size: 0.8em; font-weight: bold; margin-left: 10px; }
+  </style>
+</head>
+<body>
+  <p><a href="../">← Back to Home</a> · <a href="../schema/">Schema</a></p>
+  <h1>AVR Data Resources</h1>
+  <div class="info-box">
+    <p><strong>Data graph:</strong> <code>https://purl.humanatlas.io/graph/avr</code></p>
+    <p><strong>Source data:</strong> <code>avr-data.source.json</code></p>
+  </div>
+  <div class="resource-grid">
+    <div class="resource-card"><h3>Source JSON</h3><p>Downloaded AVR API payload.</p><a href="./avr-data.source.json">Open JSON</a></div>
+    <div class="resource-card"><h3>LinkML YAML</h3><p>Normalized instance data.</p><a href="./avr-data.yaml">Open YAML</a></div>
+    <div class="resource-card"><h3>LinkML JSON</h3><p>Canonical LinkML JSON export.</p><a href="./avr-data.json">Open JSON</a></div>
+    <div class="resource-card"><h3>Turtle</h3><p>Primary RDF serialization.</p><a href="./avr-data.ttl">Open TTL</a></div>
+  </div>
+  <h2>Other Files</h2>
+  <div id="data-files"><div class="file-list">Loading file list...</div></div>
+  <script>
+    const PRIMARY = new Set(["index.html","avr-data.source.json","avr-data.yaml","avr-data.json","avr-data.ttl","avr-data.jsonld","avr-data.owl","avr-data.nt","files.json"]);
+    fetch('./files.json').then(r => r.ok ? r.json() : null).then(data => {
+      const files = (data?.files || []).filter(file => !PRIMARY.has(file));
+      if (!files.length) {
+        document.getElementById('data-files').innerHTML = '<p>No additional files found.</p>';
+        return;
+      }
+      const list = document.createElement('ul');
+      list.className = 'file-list';
+      files.sort((a,b) => a.localeCompare(b)).forEach(file => {
+        const li = document.createElement('li');
+        const link = document.createElement('a');
+        link.href = './' + file;
+        link.textContent = file;
+        const badge = document.createElement('span');
+        badge.className = 'file-type';
+        badge.textContent = file.split('.').pop().toUpperCase();
+        li.appendChild(link);
+        li.appendChild(badge);
+        list.appendChild(li);
+      });
+      document.getElementById('data-files').innerHTML = '';
+      document.getElementById('data-files').appendChild(list);
+    }).catch(() => {
+      document.getElementById('data-files').innerHTML = '<p>Data manifest not available.</p>';
+    });
+  </script>
+</body>
+</html>

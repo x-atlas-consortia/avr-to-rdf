@@ -1,0 +1,1521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Antibody</title>
+  <style>
+    body { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #222; }
+    a { color: #2f4fc2; }
+    table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
+    th, td { border: 1px solid #ddd; padding: 0.5rem; text-align: left; vertical-align: top; }
+    th { background: #f4f6fb; }
+    code { background: #f4f4f4; padding: 0.1rem 0.3rem; border-radius: 4px; }
+    pre { background: #f7f7f7; padding: 1rem; overflow-x: auto; border-radius: 6px; }
+  </style>
+</head>
+<body>
+<hr />
+<h2>search:<br />
+boost: 10.0</h2>
+<h1>Class: Antibody (Antibody)</h1>
+<p><em>An antibody subject to validation reporting.</em></p>
+<div data-search-exclude markdown="1">
+<p>URI: <a href="https://purl.humanatlas.io/schema/avr#Antibody">avro:Antibody</a></p>
+<pre><code class="language-mermaid"> classDiagram
+    class Antibody
+    click Antibody href &quot;../Antibody/&quot;
+      Antibody : antibody_hubmap_id
+        
+      Antibody : antibody_uuid
+        
+      Antibody : antigen_retrieval
+        
+      Antibody : author_orcids
+        
+      Antibody : avr_pdf
+        
+      Antibody : avr_pdf_filename
+        
+      Antibody : avr_pdf_uuid
+        
+      Antibody : catalog_number
+        
+      Antibody : cell_marker
+        
+      Antibody : clonality
+        
+      Antibody : clone_id
+        
+      Antibody : concentration_value
+        
+      Antibody : conjugate
+        
+      Antibody : created_by_user_displayname
+        
+      Antibody : created_by_user_email
+        
+      Antibody : created_by_user_sub
+        
+      Antibody : cycle_number
+        
+      Antibody : dilution_factor
+        
+      Antibody : fluorescent_reporter
+        
+      Antibody : group_uuid
+        
+      Antibody : hgnc_id
+        
+      Antibody : host
+        
+      Antibody : isotype
+        
+      Antibody : lot_number
+        
+      Antibody : manuscript_doi
+        
+      Antibody : method
+        
+      Antibody : next_version_id
+        
+      Antibody : omap
+        
+      Antibody : omap_id
+        
+      Antibody : organ
+        
+      Antibody : organ_uberon_id
+        
+      Antibody : previous_version_id
+        
+      Antibody : previous_version_pdf_filename
+        
+      Antibody : previous_version_pdf_uuid
+        
+      Antibody : protocol_doi
+        
+      Antibody : recombinant
+        
+      Antibody : recommended
+        
+      Antibody : rrid
+        
+      Antibody : segmentation_cell_membrane
+        
+      Antibody : senescence_specific
+        
+      Antibody : target_symbol
+        
+      Antibody : taxon
+        
+      Antibody : tissue_preservation
+        
+      Antibody : uniprot_accession_number
+        
+      Antibody : vendor_affiliation
+        
+      Antibody : vendor_name
+        
+      
+</code></pre>
+<!-- no inheritance hierarchy -->
+<h2>Class Properties</h2>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Class URI</td>
+<td><a href="https://purl.humanatlas.io/schema/avr#Antibody">avro:Antibody</a></td>
+</tr>
+</tbody>
+</table>
+<h2>Slots</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+<th>Inheritance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="antibody_hubmap_id.html">antibody_hubmap_id</a></td>
+<td>1 <br/> <a href="String.html">String</a></td>
+<td>HuBMAP identifier for the antibody</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="antibody_uuid.html">antibody_uuid</a></td>
+<td>0..1 <br/> <a href="String.html">String</a></td>
+<td>Universally unique identifier for the antibody</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="target_symbol.html">target_symbol</a></td>
+<td>0..1 <br/> <a href="String.html">String</a></td>
+<td>Gene symbol (HGNC) of the antibody target</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="hgnc_id.html">hgnc_id</a></td>
+<td>0..1 <br/> <a href="ResourceIdentifier.html">ResourceIdentifier</a></td>
+<td>HGNC gene identifier</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="uniprot_accession_number.html">uniprot_accession_number</a></td>
+<td>0..1 <br/> <a href="ResourceIdentifier.html">ResourceIdentifier</a></td>
+<td>UniProt accession number for the target protein</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="rrid.html">rrid</a></td>
+<td>0..1 <br/> <a href="ResourceIdentifier.html">ResourceIdentifier</a></td>
+<td>Research Resource Identifier (RRID) for this antibody</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="clone_id.html">clone_id</a></td>
+<td>0..1 <br/> <a href="String.html">String</a></td>
+<td>Clone identifier for monoclonal antibodies</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="clonality.html">clonality</a></td>
+<td>1 <br/> <a href="String.html">String</a></td>
+<td>Clonality of the antibody (monoclonal or polyclonal)</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="host.html">host</a></td>
+<td>1 <br/> <a href="String.html">String</a></td>
+<td>Host organism used to generate the antibody</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="isotype.html">isotype</a></td>
+<td>0..1 <br/> <a href="String.html">String</a></td>
+<td>Immunoglobulin isotype of the antibody</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="vendor_name.html">vendor_name</a></td>
+<td>0..1 <br/> <a href="String.html">String</a></td>
+<td>Name of the vendor/supplier</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="vendor_affiliation.html">vendor_affiliation</a></td>
+<td>0..1 <br/> <a href="String.html">String</a></td>
+<td>Vendor affiliation or alternative name</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="catalog_number.html">catalog_number</a></td>
+<td>0..1 <br/> <a href="String.html">String</a></td>
+<td>Vendor catalog number</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="lot_number.html">lot_number</a></td>
+<td>0..1 <br/> <a href="String.html">String</a></td>
+<td>Lot number of the specific antibody batch</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="conjugate.html">conjugate</a></td>
+<td>0..1 <br/> <a href="String.html">String</a></td>
+<td>Fluorescent or enzymatic conjugate</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="concentration_value.html">concentration_value</a></td>
+<td>0..1 <br/> <a href="String.html">String</a></td>
+<td>Antibody concentration</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="recombinant.html">recombinant</a></td>
+<td>0..1 <br/> <a href="Boolean.html">Boolean</a></td>
+<td>Whether the antibody is recombinant</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="senescence_specific.html">senescence_specific</a></td>
+<td>0..1 <br/> <a href="Boolean.html">Boolean</a></td>
+<td>Whether the antibody is senescence-specific</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="recommended.html">recommended</a></td>
+<td>1 <br/> <a href="Boolean.html">Boolean</a></td>
+<td>Whether this antibody is recommended for use</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="dilution_factor.html">dilution_factor</a></td>
+<td>0..1 <br/> <a href="Integer.html">Integer</a></td>
+<td>Recommended dilution factor for use</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="method.html">method</a></td>
+<td>0..1 <br/> <a href="String.html">String</a></td>
+<td>Analytical method used in validation</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="organ.html">organ</a></td>
+<td>0..1 <br/> <a href="String.html">String</a></td>
+<td>Organ or tissue type used in validation</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="organ_uberon_id.html">organ_uberon_id</a></td>
+<td>0..1 <br/> <a href="ResourceIdentifier.html">ResourceIdentifier</a></td>
+<td>UBERON identifier for the tissue/organ</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="tissue_preservation.html">tissue_preservation</a></td>
+<td>0..1 <br/> <a href="String.html">String</a></td>
+<td>Method of tissue preservation</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="omap.html">omap</a></td>
+<td>0..1 <br/> <a href="String.html">String</a></td>
+<td>OMAP (organ mapping anatomical project) identifier string, such as OMAP-14</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="omap_id.html">omap_id</a></td>
+<td>0..1 <br/> <a href="ResourceIdentifier.html">ResourceIdentifier</a></td>
+<td>Canonical versionless OMAP PURL resolved from the OMAP identifier</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="cycle_number.html">cycle_number</a></td>
+<td>0..1 <br/> <a href="Integer.html">Integer</a></td>
+<td>Cycle number in multi-cycle validation</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="antigen_retrieval.html">antigen_retrieval</a></td>
+<td>0..1 <br/> <a href="String.html">String</a></td>
+<td>Antigen retrieval method used</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="segmentation_cell_membrane.html">segmentation_cell_membrane</a></td>
+<td>0..1 <br/> <a href="String.html">String</a></td>
+<td>Cell membrane segmentation method</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="cell_marker.html">cell_marker</a></td>
+<td>0..1 <br/> <a href="String.html">String</a></td>
+<td>Cell marker information</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="fluorescent_reporter.html">fluorescent_reporter</a></td>
+<td>0..1 <br/> <a href="String.html">String</a></td>
+<td>Fluorescent reporter used</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="taxon.html">taxon</a></td>
+<td>0..1 <br/> <a href="String.html">String</a></td>
+<td>Taxon information</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="created_by_user_displayname.html">created_by_user_displayname</a></td>
+<td>0..1 <br/> <a href="String.html">String</a></td>
+<td>Name of user who created this record</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="created_by_user_email.html">created_by_user_email</a></td>
+<td>0..1 <br/> <a href="String.html">String</a></td>
+<td>Email of user who created this record</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="created_by_user_sub.html">created_by_user_sub</a></td>
+<td>0..1 <br/> <a href="String.html">String</a></td>
+<td>Subject identifier of user who created this record</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="group_uuid.html">group_uuid</a></td>
+<td>0..1 <br/> <a href="String.html">String</a></td>
+<td>UUID of the group managing this record</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="author_orcids.html">author_orcids</a></td>
+<td>* <br/> <a href="ResourceIdentifier.html">ResourceIdentifier</a></td>
+<td>ORCID(s) of the author(s)</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="manuscript_doi.html">manuscript_doi</a></td>
+<td>0..1 <br/> <a href="ResourceIdentifier.html">ResourceIdentifier</a></td>
+<td>DOI of associated manuscript</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="protocol_doi.html">protocol_doi</a></td>
+<td>0..1 <br/> <a href="ResourceIdentifier.html">ResourceIdentifier</a></td>
+<td>DOI of the experimental protocol</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="avr_pdf_filename.html">avr_pdf_filename</a></td>
+<td>0..1 <br/> <a href="String.html">String</a></td>
+<td>Filename of the validation report PDF</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="avr_pdf_uuid.html">avr_pdf_uuid</a></td>
+<td>0..1 <br/> <a href="String.html">String</a></td>
+<td>UUID of the validation report PDF</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="avr_pdf.html">avr_pdf</a></td>
+<td>0..1 <br/> <a href="ResourceIdentifier.html">ResourceIdentifier</a></td>
+<td>Download URL for the validation report PDF</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="previous_version_id.html">previous_version_id</a></td>
+<td>0..1 <br/> <a href="String.html">String</a></td>
+<td>Identifier of previous version if this is an update</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="previous_version_pdf_filename.html">previous_version_pdf_filename</a></td>
+<td>0..1 <br/> <a href="String.html">String</a></td>
+<td>Filename of previous version PDF</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="previous_version_pdf_uuid.html">previous_version_pdf_uuid</a></td>
+<td>0..1 <br/> <a href="String.html">String</a></td>
+<td>UUID of previous version PDF</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="next_version_id.html">next_version_id</a></td>
+<td>0..1 <br/> <a href="String.html">String</a></td>
+<td>Identifier of next version if this has been superseded</td>
+<td>direct</td>
+</tr>
+</tbody>
+</table>
+<h2>Usages</h2>
+<table>
+<thead>
+<tr>
+<th>used by</th>
+<th>used in</th>
+<th>type</th>
+<th>used</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="AntibodyValidationReportCollection.html">AntibodyValidationReportCollection</a></td>
+<td><a href="antibodies.html">antibodies</a></td>
+<td>range</td>
+<td><a href="Antibody.html">Antibody</a></td>
+</tr>
+</tbody>
+</table>
+<h2>Identifier and Mapping Information</h2>
+<h3>Valid ID Prefixes</h3>
+<p>Instances of this class <em>should</em> have identifiers with one of the following prefixes:</p>
+<ul>
+<li>avr</li>
+</ul>
+<h3>Schema Source</h3>
+<ul>
+<li>from schema: https://purl.humanatlas.io/schema/avr</li>
+</ul>
+<h2>Mappings</h2>
+<table>
+<thead>
+<tr>
+<th>Mapping Type</th>
+<th>Mapped Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>self</td>
+<td>avro:Antibody</td>
+</tr>
+<tr>
+<td>native</td>
+<td>avro:Antibody</td>
+</tr>
+</tbody>
+</table>
+<h2>LinkML Source</h2>
+<!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
+<h3>Direct</h3>
+<details>
+```yaml
+name: Antibody
+id_prefixes:
+- avr
+description: An antibody subject to validation reporting.
+title: Antibody
+from_schema: https://purl.humanatlas.io/schema/avr
+rank: 1000
+attributes:
+  antibody_hubmap_id:
+    name: antibody_hubmap_id
+    description: HuBMAP identifier for the antibody.
+    title: antibody hubmap identifier
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:antibody_hubmap_id
+    identifier: true
+    domain_of:
+    - Antibody
+    range: string
+    required: true
+  antibody_uuid:
+    name: antibody_uuid
+    description: Universally unique identifier for the antibody.
+    title: antibody uuid
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:antibody_uuid
+    domain_of:
+    - Antibody
+    range: string
+  target_symbol:
+    name: target_symbol
+    description: Gene symbol (HGNC) of the antibody target.
+    title: target symbol
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:target_symbol
+    domain_of:
+    - Antibody
+    range: string
+  hgnc_id:
+    name: hgnc_id
+    description: HGNC gene identifier.
+    title: HGNC identifier
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:hgnc_id
+    domain_of:
+    - Antibody
+    range: ResourceIdentifier
+  uniprot_accession_number:
+    name: uniprot_accession_number
+    description: UniProt accession number for the target protein.
+    title: UniProt accession number
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:uniprot_accession_number
+    domain_of:
+    - Antibody
+    range: ResourceIdentifier
+  rrid:
+    name: rrid
+    description: Research Resource Identifier (RRID) for this antibody.
+    title: RRID
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:rrid
+    domain_of:
+    - Antibody
+    range: ResourceIdentifier
+  clone_id:
+    name: clone_id
+    description: Clone identifier for monoclonal antibodies.
+    title: clone identifier
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:clone_id
+    domain_of:
+    - Antibody
+    range: string
+  clonality:
+    name: clonality
+    description: Clonality of the antibody (monoclonal or polyclonal).
+    title: clonality
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:clonality
+    domain_of:
+    - Antibody
+    range: string
+    required: true
+  host:
+    name: host
+    description: Host organism used to generate the antibody.
+    title: host
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:host
+    domain_of:
+    - Antibody
+    range: string
+    required: true
+  isotype:
+    name: isotype
+    description: Immunoglobulin isotype of the antibody.
+    title: isotype
+    examples:
+    - value: IgG1
+    - value: IgM
+    - value: IgG2a
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:isotype
+    domain_of:
+    - Antibody
+    range: string
+  vendor_name:
+    name: vendor_name
+    description: Name of the vendor/supplier.
+    title: vendor name
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:vendor_name
+    domain_of:
+    - Antibody
+    range: string
+  vendor_affiliation:
+    name: vendor_affiliation
+    description: Vendor affiliation or alternative name.
+    title: vendor affiliation
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:vendor_affiliation
+    domain_of:
+    - Antibody
+    range: string
+  catalog_number:
+    name: catalog_number
+    description: Vendor catalog number.
+    title: catalog number
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:catalog_number
+    domain_of:
+    - Antibody
+    range: string
+  lot_number:
+    name: lot_number
+    description: Lot number of the specific antibody batch.
+    title: lot number
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:lot_number
+    domain_of:
+    - Antibody
+    range: string
+  conjugate:
+    name: conjugate
+    description: Fluorescent or enzymatic conjugate.
+    title: conjugate
+    examples:
+    - value: FITC
+    - value: PE
+    - value: APC
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:conjugate
+    domain_of:
+    - Antibody
+    range: string
+  concentration_value:
+    name: concentration_value
+    description: Antibody concentration.
+    title: concentration value
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:concentration_value
+    domain_of:
+    - Antibody
+    range: string
+  recombinant:
+    name: recombinant
+    description: Whether the antibody is recombinant.
+    title: recombinant
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:recombinant
+    domain_of:
+    - Antibody
+    range: boolean
+  senescence_specific:
+    name: senescence_specific
+    description: Whether the antibody is senescence-specific.
+    title: senescence-specific
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:senescence_specific
+    domain_of:
+    - Antibody
+    range: boolean
+  recommended:
+    name: recommended
+    description: Whether this antibody is recommended for use.
+    title: recommended
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:recommended
+    domain_of:
+    - Antibody
+    range: boolean
+    required: true
+  dilution_factor:
+    name: dilution_factor
+    description: Recommended dilution factor for use.
+    title: dilution factor
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:dilution_factor
+    domain_of:
+    - Antibody
+    range: integer
+  method:
+    name: method
+    description: Analytical method used in validation.
+    title: method
+    examples:
+    - value: MICS
+    - value: IHC
+    - value: Flow Cytometry
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:method
+    domain_of:
+    - Antibody
+    range: string
+  organ:
+    name: organ
+    description: Organ or tissue type used in validation.
+    title: organ
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:organ
+    domain_of:
+    - Antibody
+    range: string
+  organ_uberon_id:
+    name: organ_uberon_id
+    description: UBERON identifier for the tissue/organ.
+    title: organ UBERON identifier
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:organ_uberon_id
+    domain_of:
+    - Antibody
+    range: ResourceIdentifier
+  tissue_preservation:
+    name: tissue_preservation
+    description: Method of tissue preservation.
+    title: tissue preservation
+    examples:
+    - value: 1% PFA fixed frozen
+    - value: Fresh
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:tissue_preservation
+    domain_of:
+    - Antibody
+    range: string
+  omap:
+    name: omap
+    description: OMAP (organ mapping anatomical project) identifier string, such as
+      OMAP-14.
+    title: OMAP identifier
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:omap
+    domain_of:
+    - Antibody
+    range: string
+  omap_id:
+    name: omap_id
+    description: Canonical versionless OMAP PURL resolved from the OMAP identifier.
+    title: OMAP PURL
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:omap_id
+    domain_of:
+    - Antibody
+    range: ResourceIdentifier
+  cycle_number:
+    name: cycle_number
+    description: Cycle number in multi-cycle validation.
+    title: cycle number
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:cycle_number
+    domain_of:
+    - Antibody
+    range: integer
+  antigen_retrieval:
+    name: antigen_retrieval
+    description: Antigen retrieval method used.
+    title: antigen retrieval
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:antigen_retrieval
+    domain_of:
+    - Antibody
+    range: string
+  segmentation_cell_membrane:
+    name: segmentation_cell_membrane
+    description: Cell membrane segmentation method.
+    title: segmentation cell membrane
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:segmentation_cell_membrane
+    domain_of:
+    - Antibody
+    range: string
+  cell_marker:
+    name: cell_marker
+    description: Cell marker information.
+    title: cell marker
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:cell_marker
+    domain_of:
+    - Antibody
+    range: string
+  fluorescent_reporter:
+    name: fluorescent_reporter
+    description: Fluorescent reporter used.
+    title: fluorescent reporter
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:fluorescent_reporter
+    domain_of:
+    - Antibody
+    range: string
+  taxon:
+    name: taxon
+    description: Taxon information.
+    title: taxon
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:taxon
+    domain_of:
+    - Antibody
+    range: string
+  created_by_user_displayname:
+    name: created_by_user_displayname
+    description: Name of user who created this record.
+    title: created by user displayname
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:created_by_user_displayname
+    domain_of:
+    - Antibody
+    range: string
+  created_by_user_email:
+    name: created_by_user_email
+    description: Email of user who created this record.
+    title: created by user email
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:created_by_user_email
+    domain_of:
+    - Antibody
+    range: string
+  created_by_user_sub:
+    name: created_by_user_sub
+    description: Subject identifier of user who created this record.
+    title: created by user subject
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:created_by_user_sub
+    domain_of:
+    - Antibody
+    range: string
+  group_uuid:
+    name: group_uuid
+    description: UUID of the group managing this record.
+    title: group uuid
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:group_uuid
+    domain_of:
+    - Antibody
+    range: string
+  author_orcids:
+    name: author_orcids
+    description: ORCID(s) of the author(s).
+    title: author ORCIDs
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:author_orcids
+    domain_of:
+    - Antibody
+    range: ResourceIdentifier
+    multivalued: true
+    inlined_as_list: true
+  manuscript_doi:
+    name: manuscript_doi
+    description: DOI of associated manuscript.
+    title: manuscript DOI
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:manuscript_doi
+    domain_of:
+    - Antibody
+    range: ResourceIdentifier
+  protocol_doi:
+    name: protocol_doi
+    description: DOI of the experimental protocol.
+    title: protocol DOI
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:protocol_doi
+    domain_of:
+    - Antibody
+    range: ResourceIdentifier
+  avr_pdf_filename:
+    name: avr_pdf_filename
+    description: Filename of the validation report PDF.
+    title: AVR PDF filename
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:avr_pdf_filename
+    domain_of:
+    - Antibody
+    range: string
+  avr_pdf_uuid:
+    name: avr_pdf_uuid
+    description: UUID of the validation report PDF.
+    title: AVR PDF UUID
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:avr_pdf_uuid
+    domain_of:
+    - Antibody
+    range: string
+  avr_pdf:
+    name: avr_pdf
+    description: Download URL for the validation report PDF.
+    title: AVR PDF URL
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:avr_pdf
+    domain_of:
+    - Antibody
+    range: ResourceIdentifier
+  previous_version_id:
+    name: previous_version_id
+    description: Identifier of previous version if this is an update.
+    title: previous version identifier
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:previous_version_id
+    domain_of:
+    - Antibody
+    range: string
+  previous_version_pdf_filename:
+    name: previous_version_pdf_filename
+    description: Filename of previous version PDF.
+    title: previous version PDF filename
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:previous_version_pdf_filename
+    domain_of:
+    - Antibody
+    range: string
+  previous_version_pdf_uuid:
+    name: previous_version_pdf_uuid
+    description: UUID of previous version PDF.
+    title: previous version PDF UUID
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:previous_version_pdf_uuid
+    domain_of:
+    - Antibody
+    range: string
+  next_version_id:
+    name: next_version_id
+    description: Identifier of next version if this has been superseded.
+    title: next version identifier
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:next_version_id
+    domain_of:
+    - Antibody
+    range: string
+class_uri: avro:Antibody
+<pre><code>&lt;/details&gt;
+
+### Induced
+
+&lt;details&gt;
+```yaml
+name: Antibody
+id_prefixes:
+- avr
+description: An antibody subject to validation reporting.
+title: Antibody
+from_schema: https://purl.humanatlas.io/schema/avr
+rank: 1000
+attributes:
+  antibody_hubmap_id:
+    name: antibody_hubmap_id
+    description: HuBMAP identifier for the antibody.
+    title: antibody hubmap identifier
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:antibody_hubmap_id
+    identifier: true
+    owner: Antibody
+    domain_of:
+    - Antibody
+    range: string
+    required: true
+  antibody_uuid:
+    name: antibody_uuid
+    description: Universally unique identifier for the antibody.
+    title: antibody uuid
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:antibody_uuid
+    owner: Antibody
+    domain_of:
+    - Antibody
+    range: string
+  target_symbol:
+    name: target_symbol
+    description: Gene symbol (HGNC) of the antibody target.
+    title: target symbol
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:target_symbol
+    owner: Antibody
+    domain_of:
+    - Antibody
+    range: string
+  hgnc_id:
+    name: hgnc_id
+    description: HGNC gene identifier.
+    title: HGNC identifier
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:hgnc_id
+    owner: Antibody
+    domain_of:
+    - Antibody
+    range: ResourceIdentifier
+  uniprot_accession_number:
+    name: uniprot_accession_number
+    description: UniProt accession number for the target protein.
+    title: UniProt accession number
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:uniprot_accession_number
+    owner: Antibody
+    domain_of:
+    - Antibody
+    range: ResourceIdentifier
+  rrid:
+    name: rrid
+    description: Research Resource Identifier (RRID) for this antibody.
+    title: RRID
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:rrid
+    owner: Antibody
+    domain_of:
+    - Antibody
+    range: ResourceIdentifier
+  clone_id:
+    name: clone_id
+    description: Clone identifier for monoclonal antibodies.
+    title: clone identifier
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:clone_id
+    owner: Antibody
+    domain_of:
+    - Antibody
+    range: string
+  clonality:
+    name: clonality
+    description: Clonality of the antibody (monoclonal or polyclonal).
+    title: clonality
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:clonality
+    owner: Antibody
+    domain_of:
+    - Antibody
+    range: string
+    required: true
+  host:
+    name: host
+    description: Host organism used to generate the antibody.
+    title: host
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:host
+    owner: Antibody
+    domain_of:
+    - Antibody
+    range: string
+    required: true
+  isotype:
+    name: isotype
+    description: Immunoglobulin isotype of the antibody.
+    title: isotype
+    examples:
+    - value: IgG1
+    - value: IgM
+    - value: IgG2a
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:isotype
+    owner: Antibody
+    domain_of:
+    - Antibody
+    range: string
+  vendor_name:
+    name: vendor_name
+    description: Name of the vendor/supplier.
+    title: vendor name
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:vendor_name
+    owner: Antibody
+    domain_of:
+    - Antibody
+    range: string
+  vendor_affiliation:
+    name: vendor_affiliation
+    description: Vendor affiliation or alternative name.
+    title: vendor affiliation
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:vendor_affiliation
+    owner: Antibody
+    domain_of:
+    - Antibody
+    range: string
+  catalog_number:
+    name: catalog_number
+    description: Vendor catalog number.
+    title: catalog number
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:catalog_number
+    owner: Antibody
+    domain_of:
+    - Antibody
+    range: string
+  lot_number:
+    name: lot_number
+    description: Lot number of the specific antibody batch.
+    title: lot number
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:lot_number
+    owner: Antibody
+    domain_of:
+    - Antibody
+    range: string
+  conjugate:
+    name: conjugate
+    description: Fluorescent or enzymatic conjugate.
+    title: conjugate
+    examples:
+    - value: FITC
+    - value: PE
+    - value: APC
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:conjugate
+    owner: Antibody
+    domain_of:
+    - Antibody
+    range: string
+  concentration_value:
+    name: concentration_value
+    description: Antibody concentration.
+    title: concentration value
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:concentration_value
+    owner: Antibody
+    domain_of:
+    - Antibody
+    range: string
+  recombinant:
+    name: recombinant
+    description: Whether the antibody is recombinant.
+    title: recombinant
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:recombinant
+    owner: Antibody
+    domain_of:
+    - Antibody
+    range: boolean
+  senescence_specific:
+    name: senescence_specific
+    description: Whether the antibody is senescence-specific.
+    title: senescence-specific
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:senescence_specific
+    owner: Antibody
+    domain_of:
+    - Antibody
+    range: boolean
+  recommended:
+    name: recommended
+    description: Whether this antibody is recommended for use.
+    title: recommended
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:recommended
+    owner: Antibody
+    domain_of:
+    - Antibody
+    range: boolean
+    required: true
+  dilution_factor:
+    name: dilution_factor
+    description: Recommended dilution factor for use.
+    title: dilution factor
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:dilution_factor
+    owner: Antibody
+    domain_of:
+    - Antibody
+    range: integer
+  method:
+    name: method
+    description: Analytical method used in validation.
+    title: method
+    examples:
+    - value: MICS
+    - value: IHC
+    - value: Flow Cytometry
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:method
+    owner: Antibody
+    domain_of:
+    - Antibody
+    range: string
+  organ:
+    name: organ
+    description: Organ or tissue type used in validation.
+    title: organ
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:organ
+    owner: Antibody
+    domain_of:
+    - Antibody
+    range: string
+  organ_uberon_id:
+    name: organ_uberon_id
+    description: UBERON identifier for the tissue/organ.
+    title: organ UBERON identifier
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:organ_uberon_id
+    owner: Antibody
+    domain_of:
+    - Antibody
+    range: ResourceIdentifier
+  tissue_preservation:
+    name: tissue_preservation
+    description: Method of tissue preservation.
+    title: tissue preservation
+    examples:
+    - value: 1% PFA fixed frozen
+    - value: Fresh
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:tissue_preservation
+    owner: Antibody
+    domain_of:
+    - Antibody
+    range: string
+  omap:
+    name: omap
+    description: OMAP (organ mapping anatomical project) identifier string, such as
+      OMAP-14.
+    title: OMAP identifier
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:omap
+    owner: Antibody
+    domain_of:
+    - Antibody
+    range: string
+  omap_id:
+    name: omap_id
+    description: Canonical versionless OMAP PURL resolved from the OMAP identifier.
+    title: OMAP PURL
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:omap_id
+    owner: Antibody
+    domain_of:
+    - Antibody
+    range: ResourceIdentifier
+  cycle_number:
+    name: cycle_number
+    description: Cycle number in multi-cycle validation.
+    title: cycle number
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:cycle_number
+    owner: Antibody
+    domain_of:
+    - Antibody
+    range: integer
+  antigen_retrieval:
+    name: antigen_retrieval
+    description: Antigen retrieval method used.
+    title: antigen retrieval
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:antigen_retrieval
+    owner: Antibody
+    domain_of:
+    - Antibody
+    range: string
+  segmentation_cell_membrane:
+    name: segmentation_cell_membrane
+    description: Cell membrane segmentation method.
+    title: segmentation cell membrane
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:segmentation_cell_membrane
+    owner: Antibody
+    domain_of:
+    - Antibody
+    range: string
+  cell_marker:
+    name: cell_marker
+    description: Cell marker information.
+    title: cell marker
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:cell_marker
+    owner: Antibody
+    domain_of:
+    - Antibody
+    range: string
+  fluorescent_reporter:
+    name: fluorescent_reporter
+    description: Fluorescent reporter used.
+    title: fluorescent reporter
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:fluorescent_reporter
+    owner: Antibody
+    domain_of:
+    - Antibody
+    range: string
+  taxon:
+    name: taxon
+    description: Taxon information.
+    title: taxon
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:taxon
+    owner: Antibody
+    domain_of:
+    - Antibody
+    range: string
+  created_by_user_displayname:
+    name: created_by_user_displayname
+    description: Name of user who created this record.
+    title: created by user displayname
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:created_by_user_displayname
+    owner: Antibody
+    domain_of:
+    - Antibody
+    range: string
+  created_by_user_email:
+    name: created_by_user_email
+    description: Email of user who created this record.
+    title: created by user email
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:created_by_user_email
+    owner: Antibody
+    domain_of:
+    - Antibody
+    range: string
+  created_by_user_sub:
+    name: created_by_user_sub
+    description: Subject identifier of user who created this record.
+    title: created by user subject
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:created_by_user_sub
+    owner: Antibody
+    domain_of:
+    - Antibody
+    range: string
+  group_uuid:
+    name: group_uuid
+    description: UUID of the group managing this record.
+    title: group uuid
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:group_uuid
+    owner: Antibody
+    domain_of:
+    - Antibody
+    range: string
+  author_orcids:
+    name: author_orcids
+    description: ORCID(s) of the author(s).
+    title: author ORCIDs
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:author_orcids
+    owner: Antibody
+    domain_of:
+    - Antibody
+    range: ResourceIdentifier
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
+  manuscript_doi:
+    name: manuscript_doi
+    description: DOI of associated manuscript.
+    title: manuscript DOI
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:manuscript_doi
+    owner: Antibody
+    domain_of:
+    - Antibody
+    range: ResourceIdentifier
+  protocol_doi:
+    name: protocol_doi
+    description: DOI of the experimental protocol.
+    title: protocol DOI
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:protocol_doi
+    owner: Antibody
+    domain_of:
+    - Antibody
+    range: ResourceIdentifier
+  avr_pdf_filename:
+    name: avr_pdf_filename
+    description: Filename of the validation report PDF.
+    title: AVR PDF filename
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:avr_pdf_filename
+    owner: Antibody
+    domain_of:
+    - Antibody
+    range: string
+  avr_pdf_uuid:
+    name: avr_pdf_uuid
+    description: UUID of the validation report PDF.
+    title: AVR PDF UUID
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:avr_pdf_uuid
+    owner: Antibody
+    domain_of:
+    - Antibody
+    range: string
+  avr_pdf:
+    name: avr_pdf
+    description: Download URL for the validation report PDF.
+    title: AVR PDF URL
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:avr_pdf
+    owner: Antibody
+    domain_of:
+    - Antibody
+    range: ResourceIdentifier
+  previous_version_id:
+    name: previous_version_id
+    description: Identifier of previous version if this is an update.
+    title: previous version identifier
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:previous_version_id
+    owner: Antibody
+    domain_of:
+    - Antibody
+    range: string
+  previous_version_pdf_filename:
+    name: previous_version_pdf_filename
+    description: Filename of previous version PDF.
+    title: previous version PDF filename
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:previous_version_pdf_filename
+    owner: Antibody
+    domain_of:
+    - Antibody
+    range: string
+  previous_version_pdf_uuid:
+    name: previous_version_pdf_uuid
+    description: UUID of previous version PDF.
+    title: previous version PDF UUID
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:previous_version_pdf_uuid
+    owner: Antibody
+    domain_of:
+    - Antibody
+    range: string
+  next_version_id:
+    name: next_version_id
+    description: Identifier of next version if this has been superseded.
+    title: next version identifier
+    from_schema: https://purl.humanatlas.io/schema/avr
+    rank: 1000
+    slot_uri: avro:next_version_id
+    owner: Antibody
+    domain_of:
+    - Antibody
+    range: string
+class_uri: avro:Antibody
+
+</code></pre>
+</details></div>
+</body>
+</html>

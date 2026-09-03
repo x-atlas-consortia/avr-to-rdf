@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Antibody Validation Report (AVR) Application Ontology</title>
+  <style>
+    body { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #222; }
+    a { color: #2f4fc2; }
+    table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
+    th, td { border: 1px solid #ddd; padding: 0.5rem; text-align: left; vertical-align: top; }
+    th { background: #f4f6fb; }
+    code { background: #f4f4f4; padding: 0.1rem 0.3rem; border-radius: 4px; }
+    pre { background: #f7f7f7; padding: 1rem; overflow-x: auto; border-radius: 6px; }
+  </style>
+</head>
+<body>
+<h1>Antibody Validation Report (AVR) Application Ontology</h1>
+<p>LinkML schema for Antibody Validation Report (AVR) data.</p>
+<p>URI: https://purl.humanatlas.io/schema/avr</p>
+<p>Name: avro</p>
+<h2>Classes</h2>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Antibody.html">Antibody</a></td>
+<td>An antibody subject to validation reporting</td>
+</tr>
+<tr>
+<td><a href="AntibodyValidationReportCollection.html">AntibodyValidationReportCollection</a></td>
+<td>A collection of Antibody Validation Reports</td>
+</tr>
+</tbody>
+</table>
+<h2>Slots</h2>
+<table>
+<thead>
+<tr>
+<th>Slot</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="antibodies.html">antibodies</a></td>
+<td>List of antibodies in this collection</td>
+</tr>
+<tr>
+<td><a href="antibody_hubmap_id.html">antibody_hubmap_id</a></td>
+<td>HuBMAP identifier for the antibody</td>
+</tr>
+<tr>
+<td><a href="antibody_uuid.html">antibody_uuid</a></td>
+<td>Universally unique identifier for the antibody</td>
+</tr>
+<tr>
+<td><a href="antigen_retrieval.html">antigen_retrieval</a></td>
+<td>Antigen retrieval method used</td>
+</tr>
+<tr>
+<td><a href="author_orcids.html">author_orcids</a></td>
+<td>ORCID(s) of the author(s)</td>
+</tr>
+<tr>
+<td><a href="avr_pdf.html">avr_pdf</a></td>
+<td>Download URL for the validation report PDF</td>
+</tr>
+<tr>
+<td><a href="avr_pdf_filename.html">avr_pdf_filename</a></td>
+<td>Filename of the validation report PDF</td>
+</tr>
+<tr>
+<td><a href="avr_pdf_uuid.html">avr_pdf_uuid</a></td>
+<td>UUID of the validation report PDF</td>
+</tr>
+<tr>
+<td><a href="catalog_number.html">catalog_number</a></td>
+<td>Vendor catalog number</td>
+</tr>
+<tr>
+<td><a href="cell_marker.html">cell_marker</a></td>
+<td>Cell marker information</td>
+</tr>
+<tr>
+<td><a href="clonality.html">clonality</a></td>
+<td>Clonality of the antibody (monoclonal or polyclonal)</td>
+</tr>
+<tr>
+<td><a href="clone_id.html">clone_id</a></td>
+<td>Clone identifier for monoclonal antibodies</td>
+</tr>
+<tr>
+<td><a href="concentration_value.html">concentration_value</a></td>
+<td>Antibody concentration</td>
+</tr>
+<tr>
+<td><a href="conjugate.html">conjugate</a></td>
+<td>Fluorescent or enzymatic conjugate</td>
+</tr>
+<tr>
+<td><a href="created_by_user_displayname.html">created_by_user_displayname</a></td>
+<td>Name of user who created this record</td>
+</tr>
+<tr>
+<td><a href="created_by_user_email.html">created_by_user_email</a></td>
+<td>Email of user who created this record</td>
+</tr>
+<tr>
+<td><a href="created_by_user_sub.html">created_by_user_sub</a></td>
+<td>Subject identifier of user who created this record</td>
+</tr>
+<tr>
+<td><a href="cycle_number.html">cycle_number</a></td>
+<td>Cycle number in multi-cycle validation</td>
+</tr>
+<tr>
+<td><a href="dilution_factor.html">dilution_factor</a></td>
+<td>Recommended dilution factor for use</td>
+</tr>
+<tr>
+<td><a href="fluorescent_reporter.html">fluorescent_reporter</a></td>
+<td>Fluorescent reporter used</td>
+</tr>
+<tr>
+<td><a href="group_uuid.html">group_uuid</a></td>
+<td>UUID of the group managing this record</td>
+</tr>
+<tr>
+<td><a href="hgnc_id.html">hgnc_id</a></td>
+<td>HGNC gene identifier</td>
+</tr>
+<tr>
+<td><a href="host.html">host</a></td>
+<td>Host organism used to generate the antibody</td>
+</tr>
+<tr>
+<td><a href="isotype.html">isotype</a></td>
+<td>Immunoglobulin isotype of the antibody</td>
+</tr>
+<tr>
+<td><a href="lot_number.html">lot_number</a></td>
+<td>Lot number of the specific antibody batch</td>
+</tr>
+<tr>
+<td><a href="manuscript_doi.html">manuscript_doi</a></td>
+<td>DOI of associated manuscript</td>
+</tr>
+<tr>
+<td><a href="method.html">method</a></td>
+<td>Analytical method used in validation</td>
+</tr>
+<tr>
+<td><a href="next_version_id.html">next_version_id</a></td>
+<td>Identifier of next version if this has been superseded</td>
+</tr>
+<tr>
+<td><a href="omap.html">omap</a></td>
+<td>OMAP (organ mapping anatomical project) identifier string, such as OMAP-14</td>
+</tr>
+<tr>
+<td><a href="omap_id.html">omap_id</a></td>
+<td>Canonical versionless OMAP PURL resolved from the OMAP identifier</td>
+</tr>
+<tr>
+<td><a href="organ.html">organ</a></td>
+<td>Organ or tissue type used in validation</td>
+</tr>
+<tr>
+<td><a href="organ_uberon_id.html">organ_uberon_id</a></td>
+<td>UBERON identifier for the tissue/organ</td>
+</tr>
+<tr>
+<td><a href="previous_version_id.html">previous_version_id</a></td>
+<td>Identifier of previous version if this is an update</td>
+</tr>
+<tr>
+<td><a href="previous_version_pdf_filename.html">previous_version_pdf_filename</a></td>
+<td>Filename of previous version PDF</td>
+</tr>
+<tr>
+<td><a href="previous_version_pdf_uuid.html">previous_version_pdf_uuid</a></td>
+<td>UUID of previous version PDF</td>
+</tr>
+<tr>
+<td><a href="protocol_doi.html">protocol_doi</a></td>
+<td>DOI of the experimental protocol</td>
+</tr>
+<tr>
+<td><a href="recombinant.html">recombinant</a></td>
+<td>Whether the antibody is recombinant</td>
+</tr>
+<tr>
+<td><a href="recommended.html">recommended</a></td>
+<td>Whether this antibody is recommended for use</td>
+</tr>
+<tr>
+<td><a href="rrid.html">rrid</a></td>
+<td>Research Resource Identifier (RRID) for this antibody</td>
+</tr>
+<tr>
+<td><a href="segmentation_cell_membrane.html">segmentation_cell_membrane</a></td>
+<td>Cell membrane segmentation method</td>
+</tr>
+<tr>
+<td><a href="senescence_specific.html">senescence_specific</a></td>
+<td>Whether the antibody is senescence-specific</td>
+</tr>
+<tr>
+<td><a href="target_symbol.html">target_symbol</a></td>
+<td>Gene symbol (HGNC) of the antibody target</td>
+</tr>
+<tr>
+<td><a href="taxon.html">taxon</a></td>
+<td>Taxon information</td>
+</tr>
+<tr>
+<td><a href="tissue_preservation.html">tissue_preservation</a></td>
+<td>Method of tissue preservation</td>
+</tr>
+<tr>
+<td><a href="uniprot_accession_number.html">uniprot_accession_number</a></td>
+<td>UniProt accession number for the target protein</td>
+</tr>
+<tr>
+<td><a href="vendor_affiliation.html">vendor_affiliation</a></td>
+<td>Vendor affiliation or alternative name</td>
+</tr>
+<tr>
+<td><a href="vendor_name.html">vendor_name</a></td>
+<td>Name of the vendor/supplier</td>
+</tr>
+</tbody>
+</table>
+<h2>Enumerations</h2>
+<table>
+<thead>
+<tr>
+<th>Enumeration</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="ClonalityEnum.html">ClonalityEnum</a></td>
+<td>Clonality of antibody</td>
+</tr>
+<tr>
+<td><a href="HostOrganism.html">HostOrganism</a></td>
+<td>Host organism for antibody generation</td>
+</tr>
+</tbody>
+</table>
+<h2>Types</h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Boolean.html">Boolean</a></td>
+<td>A binary (true or false) value</td>
+</tr>
+<tr>
+<td><a href="Curie.html">Curie</a></td>
+<td>a compact URI</td>
+</tr>
+<tr>
+<td><a href="Date.html">Date</a></td>
+<td>a date (year, month and day) in an idealized calendar</td>
+</tr>
+<tr>
+<td><a href="DateOrDatetime.html">DateOrDatetime</a></td>
+<td>Either a date or a datetime</td>
+</tr>
+<tr>
+<td><a href="Datetime.html">Datetime</a></td>
+<td>The combination of a date and time</td>
+</tr>
+<tr>
+<td><a href="Decimal.html">Decimal</a></td>
+<td>A real number with arbitrary precision that conforms to the xsd:decimal speci...</td>
+</tr>
+<tr>
+<td><a href="Double.html">Double</a></td>
+<td>A real number that conforms to the xsd:double specification</td>
+</tr>
+<tr>
+<td><a href="Float.html">Float</a></td>
+<td>A real number that conforms to the xsd:float specification</td>
+</tr>
+<tr>
+<td><a href="Integer.html">Integer</a></td>
+<td>An integer</td>
+</tr>
+<tr>
+<td><a href="Jsonpath.html">Jsonpath</a></td>
+<td>A string encoding a JSON Path</td>
+</tr>
+<tr>
+<td><a href="Jsonpointer.html">Jsonpointer</a></td>
+<td>A string encoding a JSON Pointer</td>
+</tr>
+<tr>
+<td><a href="Ncname.html">Ncname</a></td>
+<td>Prefix part of CURIE</td>
+</tr>
+<tr>
+<td><a href="Nodeidentifier.html">Nodeidentifier</a></td>
+<td>A URI, CURIE or BNODE that represents a node in a model</td>
+</tr>
+<tr>
+<td><a href="Objectidentifier.html">Objectidentifier</a></td>
+<td>A URI or CURIE that represents an object in the model</td>
+</tr>
+<tr>
+<td><a href="ResourceIdentifier.html">ResourceIdentifier</a></td>
+<td>URI or CURIE used to identify a resource in RDF</td>
+</tr>
+<tr>
+<td><a href="Sparqlpath.html">Sparqlpath</a></td>
+<td>A string encoding a SPARQL Property Path</td>
+</tr>
+<tr>
+<td><a href="String.html">String</a></td>
+<td>A character string</td>
+</tr>
+<tr>
+<td><a href="Time.html">Time</a></td>
+<td>A time object represents a (local) time of day, independent of any particular...</td>
+</tr>
+<tr>
+<td><a href="Uri.html">Uri</a></td>
+<td>a complete URI</td>
+</tr>
+<tr>
+<td><a href="Uriorcurie.html">Uriorcurie</a></td>
+<td>a URI or a CURIE</td>
+</tr>
+</tbody>
+</table>
+<h2>Subsets</h2>
+<table>
+<thead>
+<tr>
+<th>Subset</th>
+<th>Description</th>
+</tr>
+</thead>
+</table>
+
+</body>
+</html>
