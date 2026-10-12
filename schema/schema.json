@@ -87,6 +87,11 @@
                 },
                 "conjugate": {
                     "description": "Fluorescent or enzymatic conjugate.",
+                    "examples": [
+                        "FITC",
+                        "PE",
+                        "APC"
+                    ],
                     "type": [
                         "string",
                         "null"
@@ -154,6 +159,11 @@
                 },
                 "isotype": {
                     "description": "Immunoglobulin isotype of the antibody.",
+                    "examples": [
+                        "IgG1",
+                        "IgM",
+                        "IgG2a"
+                    ],
                     "type": [
                         "string",
                         "null"
@@ -175,6 +185,11 @@
                 },
                 "method": {
                     "description": "Analytical method used in validation.",
+                    "examples": [
+                        "MICS",
+                        "IHC",
+                        "Flow Cytometry"
+                    ],
                     "type": [
                         "string",
                         "null"
@@ -291,6 +306,10 @@
                 },
                 "tissue_preservation": {
                     "description": "Method of tissue preservation.",
+                    "examples": [
+                        "1% PFA fixed frozen",
+                        "Fresh"
+                    ],
                     "type": [
                         "string",
                         "null"
@@ -370,9 +389,9 @@
     },
     "$id": "https://purl.humanatlas.io/schema/avr",
     "$schema": "https://json-schema.org/draft/2019-09/schema",
-    "additionalProperties": true,
+    "additionalProperties": false,
     "description": "A collection of Antibody Validation Reports.",
-    "metamodel_version": "1.11.0",
+    "metamodel_version": "1.12.0",
     "properties": {
         "antibodies": {
             "description": "List of antibodies in this collection.",

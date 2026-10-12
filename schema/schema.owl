@@ -26,416 +26,416 @@ avro:Antibody a owl:Class,
     rdfs:label "Antibody" ;
     dcterms:title "Antibody" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty avro:dilution_factor ],
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty avro:vendor_name ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty avro:avr_pdf ],
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty avro:group_uuid ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:Boolean ;
             owl:onProperty avro:recommended ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom avro:ResourceIdentifier ;
-            owl:onProperty avro:avr_pdf ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty avro:previous_version_id ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty avro:antibody_uuid ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty avro:host ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty avro:taxon ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:Boolean ;
-            owl:onProperty avro:recombinant ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty avro:method ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty avro:clone_id ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty avro:previous_version_pdf_filename ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty avro:created_by_user_displayname ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty avro:hgnc_id ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
             owl:onProperty avro:catalog_number ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty avro:concentration_value ],
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty avro:avr_pdf_uuid ],
         [ a owl:Restriction ;
-            owl:minCardinality 1 ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty avro:omap ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
             owl:onProperty avro:clonality ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty avro:tissue_preservation ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty avro:antigen_retrieval ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty avro:group_uuid ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty avro:target_symbol ],
-        [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
-            owl:onProperty avro:previous_version_id ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty avro:created_by_user_email ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty avro:omap ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty avro:target_symbol ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty avro:clone_id ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty avro:created_by_user_email ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom avro:ResourceIdentifier ;
-            owl:onProperty avro:rrid ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty avro:conjugate ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty avro:created_by_user_displayname ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty avro:recommended ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty avro:created_by_user_email ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty avro:tissue_preservation ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom avro:ResourceIdentifier ;
-            owl:onProperty avro:hgnc_id ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty avro:conjugate ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty avro:omap ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty avro:avr_pdf_uuid ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty avro:omap ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty avro:isotype ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty avro:taxon ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty avro:omap_id ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty avro:previous_version_pdf_filename ],
-        [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty avro:antibody_hubmap_id ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty avro:avr_pdf_filename ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty avro:lot_number ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty avro:group_uuid ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:Integer ;
-            owl:onProperty avro:dilution_factor ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty avro:previous_version_pdf_filename ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty avro:organ ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty avro:cell_marker ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty avro:organ ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty avro:avr_pdf_filename ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty avro:method ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty avro:rrid ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty avro:avr_pdf_uuid ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty avro:concentration_value ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty avro:avr_pdf ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty avro:method ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty avro:host ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty avro:vendor_affiliation ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
             owl:onProperty avro:created_by_user_sub ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty avro:recombinant ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom avro:ResourceIdentifier ;
-            owl:onProperty avro:omap_id ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty avro:fluorescent_reporter ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty avro:dilution_factor ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom avro:ResourceIdentifier ;
-            owl:onProperty avro:author_orcids ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty avro:hgnc_id ],
-        [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
-            owl:onProperty avro:concentration_value ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty avro:protocol_doi ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty avro:cell_marker ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty avro:previous_version_pdf_uuid ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty avro:antibody_hubmap_id ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty avro:target_symbol ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty avro:next_version_id ],
-        [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty avro:host ],
-        [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty avro:recommended ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty avro:organ ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty avro:uniprot_accession_number ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty avro:protocol_doi ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty avro:uniprot_accession_number ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty avro:isotype ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom avro:ResourceIdentifier ;
-            owl:onProperty avro:manuscript_doi ],
+            owl:onProperty avro:previous_version_pdf_filename ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:Boolean ;
             owl:onProperty avro:senescence_specific ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty avro:cell_marker ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty avro:author_orcids ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty avro:segmentation_cell_membrane ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty avro:conjugate ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty avro:organ_uberon_id ],
-        [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
-            owl:onProperty avro:segmentation_cell_membrane ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty avro:tissue_preservation ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty avro:vendor_affiliation ],
+            owl:onProperty avro:target_symbol ],
         [ a owl:Restriction ;
             owl:allValuesFrom avro:ResourceIdentifier ;
-            owl:onProperty avro:organ_uberon_id ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom avro:ResourceIdentifier ;
-            owl:onProperty avro:protocol_doi ],
+            owl:onProperty avro:uniprot_accession_number ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
+            owl:onProperty avro:vendor_name ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:group_uuid ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
             owl:onProperty avro:avr_pdf_filename ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty avro:group_uuid ],
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty avro:next_version_id ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:catalog_number ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:avr_pdf_uuid ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:omap ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty avro:lot_number ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:created_by_user_sub ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:previous_version_pdf_filename ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:Integer ;
             owl:onProperty avro:cycle_number ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty avro:organ_uberon_id ],
+            owl:onProperty avro:senescence_specific ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:target_symbol ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:uniprot_accession_number ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom avro:ResourceIdentifier ;
+            owl:onProperty avro:rrid ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty avro:tissue_preservation ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom avro:ResourceIdentifier ;
+            owl:onProperty avro:omap_id ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty avro:antigen_retrieval ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom avro:ResourceIdentifier ;
+            owl:onProperty avro:avr_pdf ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty avro:antibody_hubmap_id ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:vendor_name ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:group_uuid ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty avro:previous_version_pdf_uuid ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:recommended ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:avr_pdf_filename ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:next_version_id ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:catalog_number ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:avr_pdf_uuid ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty avro:antibody_uuid ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:omap ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom avro:ResourceIdentifier ;
+            owl:onProperty avro:hgnc_id ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:clonality ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:Boolean ;
+            owl:onProperty avro:recombinant ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:lot_number ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty avro:concentration_value ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom avro:ResourceIdentifier ;
+            owl:onProperty avro:author_orcids ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:created_by_user_sub ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:previous_version_pdf_filename ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:cycle_number ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty avro:rrid ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty avro:omap_id ],
+            owl:onProperty avro:senescence_specific ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty avro:segmentation_cell_membrane ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty avro:previous_version_pdf_uuid ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty avro:clonality ],
+            owl:onProperty avro:target_symbol ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty avro:vendor_name ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty avro:antibody_uuid ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty avro:manuscript_doi ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty avro:clonality ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty avro:avr_pdf_uuid ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty avro:lot_number ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty avro:next_version_id ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty avro:cycle_number ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty avro:clone_id ],
+            owl:onProperty avro:tissue_preservation ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
             owl:onProperty avro:taxon ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty avro:fluorescent_reporter ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty avro:created_by_user_sub ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty avro:antigen_retrieval ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty avro:senescence_specific ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty avro:next_version_id ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty avro:antibody_hubmap_id ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty avro:created_by_user_sub ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty avro:previous_version_pdf_uuid ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom avro:ResourceIdentifier ;
             owl:onProperty avro:uniprot_accession_number ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty avro:catalog_number ],
-        [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty avro:isotype ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty avro:antigen_retrieval ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty avro:created_by_user_displayname ],
+            owl:onProperty avro:omap_id ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
             owl:onProperty avro:vendor_affiliation ],
         [ a owl:Restriction ;
+            owl:allValuesFrom avro:ResourceIdentifier ;
+            owl:onProperty avro:manuscript_doi ],
+        [ a owl:Restriction ;
             owl:minCardinality 0 ;
+            owl:onProperty avro:avr_pdf ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:antigen_retrieval ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty avro:fluorescent_reporter ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:previous_version_pdf_uuid ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty avro:recommended ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty avro:method ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:avr_pdf_filename ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:next_version_id ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty avro:clone_id ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty avro:isotype ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty avro:organ ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:antibody_uuid ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:hgnc_id ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty avro:clonality ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:recombinant ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty avro:segmentation_cell_membrane ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:lot_number ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty avro:created_by_user_email ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:author_orcids ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:concentration_value ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:Integer ;
+            owl:onProperty avro:dilution_factor ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
             owl:onProperty avro:cycle_number ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:rrid ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:taxon ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:tissue_preservation ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:manuscript_doi ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:vendor_affiliation ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:omap_id ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom avro:ResourceIdentifier ;
+            owl:onProperty avro:organ_uberon_id ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:avr_pdf ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty avro:previous_version_id ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:antigen_retrieval ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:antibody_hubmap_id ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:fluorescent_reporter ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty avro:conjugate ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:previous_version_pdf_uuid ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:method ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty avro:cell_marker ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty avro:host ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:clone_id ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:isotype ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:organ ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:antibody_uuid ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:hgnc_id ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty avro:created_by_user_displayname ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:segmentation_cell_membrane ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:recombinant ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom avro:ResourceIdentifier ;
+            owl:onProperty avro:protocol_doi ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:created_by_user_email ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:dilution_factor ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:concentration_value ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:taxon ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:organ_uberon_id ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:manuscript_doi ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:vendor_affiliation ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:previous_version_id ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty avro:antibody_hubmap_id ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:fluorescent_reporter ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:conjugate ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:method ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:cell_marker ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:clone_id ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:isotype ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:organ ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:created_by_user_displayname ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty avro:protocol_doi ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:segmentation_cell_membrane ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:created_by_user_email ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:dilution_factor ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:organ_uberon_id ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty avro:previous_version_id ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty avro:antibody_uuid ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty avro:recombinant ],
+            owl:onProperty avro:conjugate ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty avro:lot_number ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty avro:manuscript_doi ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty avro:vendor_name ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty avro:catalog_number ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty avro:fluorescent_reporter ],
+            owl:onProperty avro:cell_marker ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty avro:vendor_name ],
+            owl:onProperty avro:host ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty avro:senescence_specific ] ;
+            owl:onProperty avro:created_by_user_displayname ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty avro:protocol_doi ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty avro:host ] ;
     skos:definition "An antibody subject to validation reporting." ;
     skos:exactMatch avro:Antibody ;
     skos:inScheme <https://purl.humanatlas.io/schema/avr> .
